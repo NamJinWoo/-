@@ -115,5 +115,8 @@
     [self drawCircleAtCenterPoint:eyePoint withRadius:eyeRadius inContext:context];
 } // 눈을 그리기 위한 함수 정의
 
+#define MOUTH_HorizontalOffsetRatio 0.45
+#define MOUTH_VerticalOffsetRatio 0.5
+#define MOUTH_RadiusRatio 0.3 // 얼굴 크기에 대한 비례
 
 @end

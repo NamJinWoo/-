@@ -119,4 +119,35 @@
 #define MOUTH_VerticalOffsetRatio 0.5
 #define MOUTH_RadiusRatio 0.3 // 얼굴 크기에 대한 비례
 
+-(void) drawMouthBasedOnFaceCenterPoint: (CGPoint) faceCenterPoint
+                        withFaceRadius: (CGFloat) faceRadius
+                             inContext: (CGContextRef) context
+{
+    CGPoint mouthLeftPoint;
+    CGFloat mouthHorizontalOffset = faceRadius * MOUTH_HorizontalOffsetRatio;
+    CGFloat mouthVerticalOffset = faceRadius * MOUTH_VerticalOffsetRatio;
+    mouthLeftPoint.x = faceCenterPoint.x - mouthHorizontalOffset;
+    mouthLeftPoint.y = faceCenterPoint.y - mouthVerticalOffset;
+    CGPoint mouthRightPoint;
+    mouthRightPoint.x = faceCenterPoint.x - mouthHorizontalOffset;
+    mouthRightPoint.y = faceCenterPoint.y - mouthVerticalOffset;
+    
+    CGPoint mouthLeftControlPoint = mouthLeftPoint;
+    mouthLeftControlPoint.x += mouthHorizontalOffset * (2.0/3.0);
+    CGPoint mouthRightControlPoint = mouthRightPoint;
+    mouthRightControlPoint.x -= mouthHorizontalOffset * (2.0/3.0);
+    
+    CGFloat smileOffset = (faceRadius * MOUTH_RadiusRatio) * self.smileness;
+    mouthLeftControlPoint.y += smileOffset;
+    mouthRightControlPoint.y += smileOffset;
+    
+    CGContextSetLineWidth(context, 0.5);
+    [[UIColor greenColor] setStroke];
+    [[UIColor greenColor] setFill];
+    
+    
+    
+    
+}
+
 @end

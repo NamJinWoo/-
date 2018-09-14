@@ -119,6 +119,7 @@
 #define MOUTH_VerticalOffsetRatio 0.5
 #define MOUTH_RadiusRatio 0.3 // 얼굴 크기에 대한 비례
 
+//입꼬리 조절하는 함수.
 -(void) drawMouthBasedOnFaceCenterPoint: (CGPoint) faceCenterPoint
                         withFaceRadius: (CGFloat) faceRadius
                              inContext: (CGContextRef) context
@@ -145,9 +146,26 @@
     [[UIColor greenColor] setStroke];
     [[UIColor greenColor] setFill];
     
-    
-    
-    
+    UIGraphicsPushContext(context);
+    {
+        CGContextBeginPath(context);
+        CGContextMoveToPoint(context, mouthLeftPoint.x, mouthLeftPoint.y);
+        if(fabs(smileOffset) < 1){
+            CGContextAddLineToPoint(context, mouthRightPoint.x, mouthRightPoint.y);
+            CGContextStrokePath(context);
+        }
+        else{
+            CGContextAddCurveToPoint(context, mouthLeftControlPoint.x, mouthLeftControlPoint.y, mouthRightControlPoint.x, mouthRightControlPoint.y, mouthRightPoint.x, mouthRightPoint.y);
+            CGContextMoveToPoint(context, mouthRightPoint.x, mouthRightPoint.y);
+            CGContextAddCurveToPoint(context, mouthRightControlPoint.x, mouthRightControlPoint.y-smileOffset/2, mouthLeftControlPoint.x, mouthLeftControlPoint.y-smileOffset/2, mouthLeftPoint.x, mouthLeftPoint.y);
+            CGContextFillPath(context);
+        }
+    }
+    UIGraphicsPopContext();
 }
+
+#define NOSE_HorizontalOffsetRatio 0.0
+#define NOSE_VerticalOffsetRatio 0.1
+#define NOSE_RadiusRatio 0.09
 
 @end

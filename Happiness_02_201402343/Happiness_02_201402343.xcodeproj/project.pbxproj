@@ -14,6 +14,7 @@
 		CB4195B02148A911006B16C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB4195AE2148A911006B16C1 /* LaunchScreen.storyboard */; };
 		CB4195B32148A911006B16C1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4195B22148A911006B16C1 /* main.m */; };
 		CB4195C12148AB1C006B16C1 /* FaceView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4195C02148AB1C006B16C1 /* FaceView.m */; };
+		CB6E92B7214B80A000D14069 /* HappinessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6E92B6214B80A000D14069 /* HappinessViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,8 @@
 		CB4195B22148A911006B16C1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CB4195BF2148AB1C006B16C1 /* FaceView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FaceView.h; sourceTree = "<group>"; };
 		CB4195C02148AB1C006B16C1 /* FaceView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FaceView.m; sourceTree = "<group>"; };
+		CB6E92B5214B80A000D14069 /* HappinessViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HappinessViewController.h; sourceTree = "<group>"; };
+		CB6E92B6214B80A000D14069 /* HappinessViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HappinessViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,7 +71,6 @@
 				CB4195A42148A910006B16C1 /* AppDelegate.m */,
 				CB4195A62148A910006B16C1 /* ViewController.h */,
 				CB4195A72148A910006B16C1 /* ViewController.m */,
-				CB4195A92148A910006B16C1 /* Main.storyboard */,
 				CB4195AC2148A911006B16C1 /* Assets.xcassets */,
 				CB4195AE2148A911006B16C1 /* LaunchScreen.storyboard */,
 				CB4195B12148A911006B16C1 /* Info.plist */,
@@ -80,6 +82,8 @@
 		CB4195B92148A951006B16C1 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				CB6E92B5214B80A000D14069 /* HappinessViewController.h */,
+				CB6E92B6214B80A000D14069 /* HappinessViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -87,6 +91,7 @@
 		CB4195BA2148A959006B16C1 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CB4195A92148A910006B16C1 /* Main.storyboard */,
 				CB4195BF2148AB1C006B16C1 /* FaceView.h */,
 				CB4195C02148AB1C006B16C1 /* FaceView.m */,
 			);
@@ -174,6 +179,7 @@
 				CB4195B32148A911006B16C1 /* main.m in Sources */,
 				CB4195A52148A910006B16C1 /* AppDelegate.m in Sources */,
 				CB4195C12148AB1C006B16C1 /* FaceView.m in Sources */,
+				CB6E92B7214B80A000D14069 /* HappinessViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

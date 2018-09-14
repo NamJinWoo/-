@@ -168,4 +168,35 @@
 #define NOSE_VerticalOffsetRatio 0.1
 #define NOSE_RadiusRatio 0.09
 
+-(void) drawNoseBasedOnFaceCenterPoint:(CGPoint)faceCenterPoint withFaceRadius:(CGFloat)faceRadius inContext:(CGContextRef)context{
+    CGPoint noseCenterPoint = faceCenterPoint;
+    noseCenterPoint.y = faceCenterPoint.y + faceRadius * NOSE_VerticalOffsetRatio;
+    [[UIColor orangeColor]setFill];
+    [self drawCircleAtCenterPoint:noseCenterPoint withRadius:faceRadius*NOSE_RadiusRatio inContext:context];
+}
+
+-(void) drawRect:(CGRect)dirtyRect {
+    //얼굴 중심 위치를 찾는다.
+    CGPoint faceCenterPoint;
+    faceCenterPoint.x = self.bounds.origin.x +self.bounds.size.width/2;
+    faceCenterPoint.y = self.bounds.origin.y + self.bounds.size.height/2;
+    
+    //얼굴의 반경을 정한다 (얼굴은 정원이다)
+    //FaceView의 width 와 height 중 짧은 쪽을 얼굴 최대 직경으로 한다.
+    CGFloat faceRadius = self.bounds.size.width /2 ;
+    if(self.bounds.size.width > self.bounds.size.height){
+        faceRadius = self.bounds.size.height /2 ;
+    }
+    faceRadius *= self.faceScale; //얼굴 scale 에 맞추어 얼굴 반경을
+    
+    //드로잉 컨택스를 얻는다
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    
+    [self drawFaceAtCenterPoint:faceCenterPoint withRadius:faceRadius inContext:context];
+    [self drawEyesBasedOnFaceCenterPoint:faceCenterPoint withFaceRadius:faceRadius inContext:context];
+    [self drawMouthBasedOnFaceCenterPoint:faceCenterPoint withFaceRadius:faceRadius inContext:context];
+    [self drawNoseBasedOnFaceCenterPoint:faceCenterPoint withFaceRadius:faceRadius inContext:context];
+
+}
+
 @end

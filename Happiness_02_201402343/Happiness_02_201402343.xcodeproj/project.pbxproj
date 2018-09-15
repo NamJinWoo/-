@@ -8,19 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		CB4195A52148A910006B16C1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4195A42148A910006B16C1 /* AppDelegate.m */; };
-		CB4195AB2148A910006B16C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB4195A92148A910006B16C1 /* Main.storyboard */; };
 		CB4195AD2148A911006B16C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB4195AC2148A911006B16C1 /* Assets.xcassets */; };
 		CB4195B02148A911006B16C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB4195AE2148A911006B16C1 /* LaunchScreen.storyboard */; };
 		CB4195B32148A911006B16C1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4195B22148A911006B16C1 /* main.m */; };
 		CB4195C12148AB1C006B16C1 /* FaceView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4195C02148AB1C006B16C1 /* FaceView.m */; };
 		CB6E92B7214B80A000D14069 /* HappinessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6E92B6214B80A000D14069 /* HappinessViewController.m */; };
+		CB6E92BB214B8D7000D14069 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB6E92BA214B8D7000D14069 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CB4195A02148A910006B16C1 /* Happiness_02_201402343.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Happiness_02_201402343.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB4195A32148A910006B16C1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CB4195A42148A910006B16C1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		CB4195AA2148A910006B16C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CB4195AC2148A911006B16C1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CB4195AF2148A911006B16C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CB4195B12148A911006B16C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -29,6 +28,7 @@
 		CB4195C02148AB1C006B16C1 /* FaceView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FaceView.m; sourceTree = "<group>"; };
 		CB6E92B5214B80A000D14069 /* HappinessViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HappinessViewController.h; sourceTree = "<group>"; };
 		CB6E92B6214B80A000D14069 /* HappinessViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HappinessViewController.m; sourceTree = "<group>"; };
+		CB6E92BA214B8D7000D14069 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../../../../../../../.Trash/Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,7 +82,7 @@
 		CB4195BA2148A959006B16C1 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				CB4195A92148A910006B16C1 /* Main.storyboard */,
+				CB6E92BA214B8D7000D14069 /* Main.storyboard */,
 				CB4195BF2148AB1C006B16C1 /* FaceView.h */,
 				CB4195C02148AB1C006B16C1 /* FaceView.m */,
 			);
@@ -159,7 +159,7 @@
 			files = (
 				CB4195B02148A911006B16C1 /* LaunchScreen.storyboard in Resources */,
 				CB4195AD2148A911006B16C1 /* Assets.xcassets in Resources */,
-				CB4195AB2148A910006B16C1 /* Main.storyboard in Resources */,
+				CB6E92BB214B8D7000D14069 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,14 +180,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		CB4195A92148A910006B16C1 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CB4195AA2148A910006B16C1 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		CB4195AE2148A911006B16C1 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

@@ -68,14 +68,10 @@
 				CBEF12FD213D25700096A3EF /* Controller */,
 				CBEF12FC213D256B0096A3EF /* App */,
 				CBEF12FB213D25620096A3EF /* View */,
-				CBEF12E5213D23400096A3EF /* AppDelegate.h */,
-				CBEF12E6213D23400096A3EF /* AppDelegate.m */,
 				CBEF12E8213D23400096A3EF /* ViewController.h */,
 				CBEF12E9213D23400096A3EF /* ViewController.m */,
 				CBEF12EE213D23410096A3EF /* Assets.xcassets */,
-				CBEF12F0213D23410096A3EF /* LaunchScreen.storyboard */,
 				CBEF12F3213D23410096A3EF /* Info.plist */,
-				CBEF12F4213D23410096A3EF /* main.m */,
 			);
 			path = SimpleCalculator_01_201402343;
 			sourceTree = "<group>";
@@ -91,6 +87,10 @@
 		CBEF12FC213D256B0096A3EF /* App */ = {
 			isa = PBXGroup;
 			children = (
+				CBEF12E5213D23400096A3EF /* AppDelegate.h */,
+				CBEF12E6213D23400096A3EF /* AppDelegate.m */,
+				CBEF12F0213D23410096A3EF /* LaunchScreen.storyboard */,
+				CBEF12F4213D23410096A3EF /* main.m */,
 			);
 			path = App;
 			sourceTree = "<group>";

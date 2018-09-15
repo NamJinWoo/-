@@ -128,10 +128,10 @@
     CGFloat mouthHorizontalOffset = faceRadius * MOUTH_HorizontalOffsetRatio;
     CGFloat mouthVerticalOffset = faceRadius * MOUTH_VerticalOffsetRatio;
     mouthLeftPoint.x = faceCenterPoint.x - mouthHorizontalOffset;
-    mouthLeftPoint.y = faceCenterPoint.y - mouthVerticalOffset;
+    mouthLeftPoint.y = faceCenterPoint.y + mouthVerticalOffset;
     CGPoint mouthRightPoint;
-    mouthRightPoint.x = faceCenterPoint.x - mouthHorizontalOffset;
-    mouthRightPoint.y = faceCenterPoint.y - mouthVerticalOffset;
+    mouthRightPoint.x = faceCenterPoint.x + mouthHorizontalOffset;
+    mouthRightPoint.y = faceCenterPoint.y + mouthVerticalOffset;
     
     CGPoint mouthLeftControlPoint = mouthLeftPoint;
     mouthLeftControlPoint.x += mouthHorizontalOffset * (2.0/3.0);

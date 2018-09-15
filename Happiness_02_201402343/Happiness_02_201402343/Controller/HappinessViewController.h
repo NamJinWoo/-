@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "FaceView.h"
+#import "../View/FaceView.h"
+
 
 @interface HappinessViewController : UIViewController <FaceViewDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *happinessLabel;

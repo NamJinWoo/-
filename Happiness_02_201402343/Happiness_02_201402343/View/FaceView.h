@@ -11,6 +11,8 @@
 @class FaceView;
 
 @protocol FaceViewDelegate //FaceViewProtocol 정의
+//HappinessViewController에서 받아온값을 통해 FaceView로 보여줘야하기때문에
+//이러한 프로토콜을 설정한다.
 
 -(CGFloat) smilenessForFaceView:(FaceView *) requestor;
 

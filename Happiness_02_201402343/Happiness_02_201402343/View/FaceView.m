@@ -102,27 +102,19 @@
 #define Eye_RadiusRatio 0.15
 //눈을 그리기 위한 상수 값 정의
 -(void) drawEyesBasedOnFaceCenterPoint:(CGPoint)faceCenterPoint withFaceRadius:(CGFloat)faceRadius inContext:(CGContextRef)context{
-//    CGPoint eyePoint;
-//    CGFloat eyeHorizontalOffset = faceRadius * EYE_HorizontalOffSetRatio;
-//    CGFloat eyeVerticalOffset = faceRadius * EYE_VerticalOffSetRatio;
-//    CGFloat eyeRadius = faceRadius * Eye_RadiusRatio;
-//    eyePoint.x = faceCenterPoint.x - eyeHorizontalOffset;
-//    eyePoint.y = faceCenterPoint.y - eyeVerticalOffset;
-//
-//    [[UIColor cyanColor] setFill];
-//    [self drawCircleAtCenterPoint:eyePoint withRadius:eyeRadius inContext:context];
-//    eyePoint.x = faceCenterPoint.x + eyeHorizontalOffset;
-//    [self drawCircleAtCenterPoint:eyePoint withRadius:eyeRadius inContext:context];
-    CGPoint leftEyeLeftPoint;
+    CGPoint eyePoint;
     CGFloat eyeHorizontalOffset = faceRadius * EYE_HorizontalOffSetRatio;
     CGFloat eyeVerticalOffset = faceRadius * EYE_VerticalOffSetRatio;
     CGFloat eyeRadius = faceRadius * Eye_RadiusRatio;
+    eyePoint.x = faceCenterPoint.x - eyeHorizontalOffset;
+    eyePoint.y = faceCenterPoint.y - eyeVerticalOffset;
+
+    [[UIColor cyanColor] setFill];
+    [self drawCircleAtCenterPoint:eyePoint withRadius:eyeRadius inContext:context];
+    eyePoint.x = faceCenterPoint.x + eyeHorizontalOffset;
+    [self drawCircleAtCenterPoint:eyePoint withRadius:eyeRadius inContext:context];
     
-    leftEyeLeftPoint.x = faceCenterPoint.x - eyeHorizontalOffset;
-    leftEyeLeftPoint.y = faceCenterPoint.y - eyeVerticalOffset;
-    CGPoint rightEyeLeftPoint;
-    rightEyeLeftPoint.x = faceCenterPoint.x + eyeHorizontalOffset;
-    rightEyeLeftPoint.y = faceCenterPoint.y - eyeVerticalOffset;
+    //눈을 입꼬리처럼 조절할 수 있을까.....
     
 } // 눈을 그리기 위한 함수 정의
 

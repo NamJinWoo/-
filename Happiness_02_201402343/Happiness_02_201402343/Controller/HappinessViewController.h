@@ -7,13 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "../View/FaceView.h"
-
+#import "FaceView.h"
 
 @interface HappinessViewController : UIViewController <FaceViewDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *happinessLabel;
 @property (weak, nonatomic) IBOutlet FaceView *faceView;
 @property (weak, nonatomic) IBOutlet UISlider *happinessSlider;
+@property (nonatomic)   int happiness;
 - (IBAction)happinessSliderChanged:(UISlider *)sender;
 
 @end

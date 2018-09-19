@@ -7,18 +7,15 @@
 //
 
 #import "HappinessViewController.h"
-#import "../View/FaceView.h"
+#import "FaceView.h"
 
 @interface HappinessViewController ()
 +(CGFloat) happinessToSmileness: (int) happiness;
-
-@property (nonatomic)   int happiness;
 -(void) updateFaceView;
 @end
 
 #define MAX_HAPPINESS   100
 #define MIN_HAPPINESS   0
-#define DEFAULT_HAPPINESS   50
 
 
 @implementation HappinessViewController
@@ -52,7 +49,6 @@
     self.faceView.delegate = self;
     
     self.view.layer.backgroundColor = UIColor.lightGrayColor.CGColor;
-    self.happiness = DEFAULT_HAPPINESS;
     [self updateFaceView];
 }
 

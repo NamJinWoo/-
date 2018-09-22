@@ -15,7 +15,7 @@
 
 @implementation PsychologistViewController
 
-
+#define HAPPINESS_FUCK 0
 #define HAPPINESS_BAD 10
 #define HAPPINESS_SOSO 50
 #define HAPPINESS_GOOD 90
@@ -31,7 +31,10 @@
                 happinessViewContorller.happiness = HAPPINESS_BAD;
             }else if([segue.identifier isEqualToString:@"segueSoso"]){
                 happinessViewContorller.happiness = HAPPINESS_SOSO;
-            }else{
+            }else if([segue.identifier isEqualToString:@"segueFuck"]){
+                happinessViewContorller.happiness = HAPPINESS_FUCK;
+            }
+            else{
                 happinessViewContorller.happiness = HAPPINESS_GOOD;
             }
         }

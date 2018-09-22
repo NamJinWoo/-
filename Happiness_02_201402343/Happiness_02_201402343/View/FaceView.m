@@ -92,16 +92,22 @@
     UIGraphicsPopContext();
 } //원을 그리기 위해 눈,코,입에서 호출되는 함수 매개변수로 전달된 값을 통해 화면에 원을 그린다.
 
--(void) drawFaceAtCenterPoint:(CGPoint)centerPoint withRadius:(CGFloat)radius inContext:(CGContextRef)context{
+-(void) drawFaceAtCenterPoint:(CGPoint)centerPoint
+                   withRadius:(CGFloat)radius
+                    inContext:(CGContextRef)context{
     [[UIColor darkGrayColor] setFill];
-    [self drawCircleAtCenterPoint:centerPoint withRadius:radius inContext:context];
+    [self drawCircleAtCenterPoint:centerPoint
+                       withRadius:radius
+                        inContext:context];
 } //얼굴을 그리기 위한 함수.
 
 #define EYE_HorizontalOffSetRatio 0.35
 #define EYE_VerticalOffSetRatio 0.30
 #define Eye_RadiusRatio 0.15
 //눈을 그리기 위한 상수 값 정의
--(void) drawEyesBasedOnFaceCenterPoint:(CGPoint)faceCenterPoint withFaceRadius:(CGFloat)faceRadius inContext:(CGContextRef)context{
+-(void) drawEyesBasedOnFaceCenterPoint:(CGPoint)faceCenterPoint
+                        withFaceRadius:(CGFloat)faceRadius
+                             inContext:(CGContextRef)context{
     CGPoint eyePoint;
     CGFloat eyeHorizontalOffset = faceRadius * EYE_HorizontalOffSetRatio;
     CGFloat eyeVerticalOffset = faceRadius * EYE_VerticalOffSetRatio;
@@ -113,8 +119,6 @@
     [self drawCircleAtCenterPoint:eyePoint withRadius:eyeRadius inContext:context];
     eyePoint.x = faceCenterPoint.x + eyeHorizontalOffset;
     [self drawCircleAtCenterPoint:eyePoint withRadius:eyeRadius inContext:context];
-    
-    //눈을 입꼬리처럼 조절할 수 있을까.....
     
 } // 눈을 그리기 위한 함수 정의
 
@@ -171,11 +175,15 @@
 #define NOSE_VerticalOffsetRatio 0.1
 #define NOSE_RadiusRatio 0.09
 
--(void) drawNoseBasedOnFaceCenterPoint:(CGPoint)faceCenterPoint withFaceRadius:(CGFloat)faceRadius inContext:(CGContextRef)context{
+-(void) drawNoseBasedOnFaceCenterPoint:(CGPoint)faceCenterPoint
+                        withFaceRadius:(CGFloat)faceRadius
+                             inContext:(CGContextRef)context{
     CGPoint noseCenterPoint = faceCenterPoint;
     noseCenterPoint.y = faceCenterPoint.y + faceRadius * NOSE_VerticalOffsetRatio;
     [[UIColor orangeColor]setFill];
-    [self drawCircleAtCenterPoint:noseCenterPoint withRadius:faceRadius*NOSE_RadiusRatio inContext:context];
+    [self drawCircleAtCenterPoint:noseCenterPoint
+                       withRadius:faceRadius*NOSE_RadiusRatio
+                        inContext:context];
 }
 
 -(void) drawRect:(CGRect)dirtyRect {

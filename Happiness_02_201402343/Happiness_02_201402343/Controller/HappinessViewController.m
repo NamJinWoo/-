@@ -16,6 +16,7 @@
 
 #define MAX_HAPPINESS   100
 #define MIN_HAPPINESS   0
+#define DEFAULT_HAPPINESS 50
 
 
 @implementation HappinessViewController
@@ -49,6 +50,7 @@
     self.faceView.delegate = self;
     
     self.view.layer.backgroundColor = UIColor.lightGrayColor.CGColor;
+    self.happiness = DEFAULT_HAPPINESS;
     [self updateFaceView];
 }
 

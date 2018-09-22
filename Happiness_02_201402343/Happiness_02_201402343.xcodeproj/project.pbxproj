@@ -13,7 +13,7 @@
 		CB4195B32148A911006B16C1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4195B22148A911006B16C1 /* main.m */; };
 		CB4195C12148AB1C006B16C1 /* FaceView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4195C02148AB1C006B16C1 /* FaceView.m */; };
 		CB6E92B7214B80A000D14069 /* HappinessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6E92B6214B80A000D14069 /* HappinessViewController.m */; };
-		CB6E92BB214B8D7000D14069 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB6E92BA214B8D7000D14069 /* Main.storyboard */; };
+		CB8092E921567F6900B2347D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB8092E821567F6900B2347D /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,7 +28,7 @@
 		CB4195C02148AB1C006B16C1 /* FaceView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FaceView.m; sourceTree = "<group>"; };
 		CB6E92B5214B80A000D14069 /* HappinessViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HappinessViewController.h; sourceTree = "<group>"; };
 		CB6E92B6214B80A000D14069 /* HappinessViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HappinessViewController.m; sourceTree = "<group>"; };
-		CB6E92BA214B8D7000D14069 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../../../../../../../.Trash/Main.storyboard; sourceTree = "<group>"; };
+		CB8092E821567F6900B2347D /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,7 +82,7 @@
 		CB4195BA2148A959006B16C1 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				CB6E92BA214B8D7000D14069 /* Main.storyboard */,
+				CB8092E821567F6900B2347D /* Main.storyboard */,
 				CB4195BF2148AB1C006B16C1 /* FaceView.h */,
 				CB4195C02148AB1C006B16C1 /* FaceView.m */,
 			);
@@ -159,7 +159,7 @@
 			files = (
 				CB4195B02148A911006B16C1 /* LaunchScreen.storyboard in Resources */,
 				CB4195AD2148A911006B16C1 /* Assets.xcassets in Resources */,
-				CB6E92BB214B8D7000D14069 /* Main.storyboard in Resources */,
+				CB8092E921567F6900B2347D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
